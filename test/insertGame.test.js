@@ -6,7 +6,7 @@ const gameId = faker.helpers.replaceSymbols("????");
 it("should create a game document", async () => {
   const response = await insertGame.handler({
     path: "/functions/insertGame/" + gameId,
-    body: '{"user":"me"}',
+    body: '{"user":"initialized"}',
   });
   expect(response.statusCode).toBe(200);
 });
